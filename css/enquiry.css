@@ -1,0 +1,85 @@
+body,
+nav {
+    color: #424242;
+    background-color: #fcfcfc;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+.form-container {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    margin: 3rem 4rem;
+}
+
+/* FORM HEADING */
+.heading-container {
+    padding: 2rem;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+/* FORM */
+form {
+    padding: 2rem .7rem;
+    background-color: #fcfcfc;
+}
+
+form span {
+    color: #ff1515;
+}
+
+form .input-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+form label {
+    font-size: 18px;
+    margin-bottom: .7rem;
+}
+
+form .form-check label {
+    font-size: 16px;
+}
+
+form button {
+    margin-bottom: 2rem;
+}
+
+form .result-text{
+    margin-bottom: 3rem;
+}
+
+/* COPYRIGHT */
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 3rem;
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* FORM HEADING */
+    .heading-container {
+        padding: 2rem 10rem;
+    }
+
+    /* FORM */
+    form {
+        padding: 2rem 10rem;
+        background-color: #fcfcfc;
+    }
+}
