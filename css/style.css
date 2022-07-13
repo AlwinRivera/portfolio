@@ -71,29 +71,35 @@ h1 {
     color: #fff;
 }
 
-/* PROCESS */
-.process-container h3 {
+/* SKILLS */
+.skills-container h3 {
     font-size: 38px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
-.process-container .process {
+.skills-container .skill {
     padding-top: 1rem;
     border-top: 1px solid #fff;
     margin-bottom: 5rem;
 }
 
-.process-container .process .no {
+.skills-container .skill .no {
     display: block;
     font-size: 101px;
     font-weight: 600;
 }
 
-.process-container .desc span {
+.skills-container .desc span {
     display: block;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: .5rem;
+}
+
+.skills-container .skill img {
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* WORK */
@@ -179,10 +185,24 @@ footer {
         margin-bottom: 10rem;
     }
 
-    /* PROCESS */
-    .process-container h3 {
+    /* SKILLS */
+    .skills-container .row {
+        border: unset;
+    }
+
+    .skills-container .skill, .skills-container .skill.first {
+        padding-top: 5rem;
+        border-top: 1px solid #fff;
+        margin-bottom: 5rem;
+    }
+
+    .skills-container h3 {
         font-size: 67px;
         margin-bottom: 5rem;
+    }
+
+    .skills-container .skill img {
+        margin-top: 0;
     }
 
     /* WORK */
@@ -243,12 +263,12 @@ footer {
         font-size: 67px;
     }
 
-    /* PROCESS */
-    .process-container h3 {
-        margin-bottom: 7rem;
+    /* SKILLS */
+    .skills-container h3 {
+        margin-bottom: 5rem;
     }
 
-    .process-container .process .no {
+    .skills-container .skill .no {
         font-size: 177px;
     }
 
