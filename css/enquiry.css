@@ -18,7 +18,7 @@ h6 {
 .form-container {
     background-color: #fff;
     border: 1px solid #e6e6e6;
-    margin: 3rem 4rem;
+    margin: 1rem 2rem;
 }
 
 /* FORM HEADING */
@@ -32,7 +32,7 @@ h3 {
 
 /* FORM */
 form {
-    padding: 2rem .7rem;
+    padding: 2rem;
     background-color: #fcfcfc;
 }
 
