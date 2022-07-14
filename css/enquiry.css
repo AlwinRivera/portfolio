@@ -18,7 +18,7 @@ h6 {
 .form-container {
     background-color: #fff;
     border: 1px solid #e6e6e6;
-    margin: 1rem 2rem;
+    margin: 2rem 0;
 }
 
 /* FORM HEADING */
@@ -30,9 +30,13 @@ h3 {
     font-size: 25px;
 }
 
+.heading-container p {
+    margin-bottom: 0;
+}
+
 /* FORM */
 form {
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     background-color: #fcfcfc;
 }
 
@@ -43,6 +47,10 @@ form span {
 form .input-container {
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+form .input-container.first {
+    margin-top: 0
 }
 
 form label {
@@ -58,7 +66,7 @@ form button {
     margin-bottom: 2rem;
 }
 
-form .result-text{
+form .result-text {
     margin-bottom: 3rem;
 }
 
