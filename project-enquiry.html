@@ -3,10 +3,10 @@
 
 <head>
     <title>Alwin - Project Enquiry</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,49 +40,49 @@
                             with a more detailed discussion about the project.
                         </p>
                     </div>
-                    <form>
+                    <form id="contact-form" method="post">
                         <div class="input-container first">
-                            <label for="name">Name <span>*</span></label>
-                            <input type="text" class="form-control" id="name" placeholder="" name="name">
+                            <label for="senderName">Name <span>*</span></label>
+                            <input type="text" class="form-control" id="senderName" name="senderName" placeholder="">
                         </div>
                         <div class="input-container">
-                            <label for="email">Email <span>*</span></label>
-                            <input type="email" class="form-control" id="email" placeholder="" name="email">
+                            <label for="senderEmail">Email <span>*</span></label>
+                            <input type="email" class="form-control" id="senderEmail" name="senderEmail" placeholder="">
                         </div>
                         <div class="input-container">
-                            <label for="details">Project Details <span>*</span></label>
+                            <label for="senderDetails">Project Details <span>*</span></label>
                             <p>
                                 Please tell me as much as you can about your project and include any relevant details.
                             </p>
-                            <textarea class="form-control" rows="3" id="details" name="details"></textarea>
+                            <textarea class="form-control" rows="3" id="senderDetails" name="senderDetails"></textarea>
                         </div>
                         <div class="input-container">
-                            <label for="launchDate">Project Launch/Deadline Date <span>*</span></label>
+                            <label for="senderLaunchDate">Project Launch/Deadline Date <span>*</span></label>
                             <p>
                                 Please add a date here if you have a launch/deadline date. Leave blank if you don't.
                             </p>
-                            <input type="date" class="form-control" id="launchDate" name="launchDate">
+                            <input type="date" class="form-control" id="senderLaunchDate" name="senderLaunchDate">
                         </div>
-                        <div class="input-container">
+                        <div class="input-container" id="budget">
                             <label for="budget1">Budget <span>*</span></label>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="budget1" name="budget"
-                                    value="20,000 PHP - 30,000 PHP" checked>
+                                <input type="radio" class="form-check-input" id="budget1"
+                                    value="20,000 PHP - 30,000 PHP" name="senderBudget" checked>
                                 <label class="form-check-label" for="budget1">
                                     20,000 PHP - 30,000 PHP (Ideal for landing pages and small 1-2 page sites)
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="budget2" name="budget"
-                                    value="30,000 PHP - 70,000 PHP">
+                                <input type="radio" class="form-check-input" id="budget2"
+                                    value="30,000 PHP - 70,000 PHP" name="senderBudget">
                                 <label class="form-check-label" for="budget2">
                                     30,000 PHP - 70,000 PHP (Ideal for sites with 3-6 pages, basic integrations, basic
                                     animations)
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="budget3" name="budget"
-                                    value="70,000 PHP +">
+                                <input type="radio" class="form-check-input" id="budget3" value="70,000 PHP +"
+                                    name="senderBudget">
                                 <label class="form-check-label" for="budget3">
                                     70,000 PHP + (Ideal for larger sites, custom design and development builds, advanced
                                     animations and
@@ -90,7 +90,8 @@
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="budget4" name="budget" value="Unknown">
+                                <input type="radio" class="form-check-input" id="budget4" value="Unknown"
+                                    name="senderBudget">
                                 <label class="form-check-label" for="budget4">
                                     Unknown - If you're not sure and your budget is flexible.
                                 </label>
@@ -122,22 +123,23 @@
             // prevent the form submit from refreshing the page
             event.preventDefault();
 
-            const { name, email, details, launchDate, budget } = event.target;
+            const { senderName, senderEmail, senderDetails, senderLaunchDate, senderBudget } = event.target;
 
             // Use your API endpoint URL you copied from the previous step
             const endpoint =
-                "https://mq9d298g2d.execute-api.us-west-2.amazonaws.com/default/sendContactEmail";
+                "https://m4oijspi1j.execute-api.us-west-2.amazonaws.com/alpha/sendContactEmail";
             // We use JSON.stringify here so the data can be sent as a string via HTTP
-            const body = JSON.stringify({
-                senderEmail: email.value,
-                senderName: name.value,
-                senderDetails: details.value,
-                senderLaunchDate: launchDate.value,
-                senderBudget: budget.value
-            });
+            const data = {
+                senderEmail: senderEmail.value,
+                senderName: senderName.value,
+                senderDetails: senderDetails.value,
+                senderLaunchDate: senderLaunchDate.value,
+                senderBudget: senderBudget.value
+            }
+
             const requestOptions = {
                 method: "POST",
-                body
+                body: JSON.stringify(data)
             };
 
             fetch(endpoint, requestOptions)
@@ -146,12 +148,11 @@
                     return response.json();
                 })
                 .then((response) => {
-                    document.getElementById("result-text").innerText =
-                        "Email sent successfully!";
+                    alert("Email sent successfully!");
+                    location.reload();
                 })
                 .catch((error) => {
-                    document.getElementById("result-text").innerText =
-                        "An unkown error occured.";
+                    alert("An unkown error occured.");
                 });
         });
     </script>
