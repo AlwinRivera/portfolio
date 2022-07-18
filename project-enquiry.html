@@ -43,38 +43,38 @@
                     <form id="contact-form" method="post">
                         <div class="input-container first">
                             <label for="senderName">Name <span>*</span></label>
-                            <input type="text" class="form-control" id="senderName" name="senderName" placeholder="">
+                            <input type="text" class="form-control" id="senderName" name="senderName" placeholder="" required>
                         </div>
                         <div class="input-container">
                             <label for="senderEmail">Email <span>*</span></label>
-                            <input type="email" class="form-control" id="senderEmail" name="senderEmail" placeholder="">
+                            <input type="email" class="form-control" id="senderEmail" name="senderEmail" placeholder="" required>
                         </div>
                         <div class="input-container">
                             <label for="senderDetails">Project Details <span>*</span></label>
                             <p>
                                 Please tell me as much as you can about your project and include any relevant details.
                             </p>
-                            <textarea class="form-control" rows="3" id="senderDetails" name="senderDetails"></textarea>
+                            <textarea class="form-control" rows="3" id="senderDetails" name="senderDetails" required></textarea>
                         </div>
                         <div class="input-container">
                             <label for="senderLaunchDate">Project Launch/Deadline Date <span>*</span></label>
                             <p>
                                 Please add a date here if you have a launch/deadline date. Leave blank if you don't.
                             </p>
-                            <input type="date" class="form-control" id="senderLaunchDate" name="senderLaunchDate">
+                            <input type="date" class="form-control" id="senderLaunchDate" name="senderLaunchDate" required>
                         </div>
                         <div class="input-container" id="budget">
                             <label for="budget1">Budget <span>*</span></label>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" id="budget1"
-                                    value="20,000 PHP - 30,000 PHP" name="senderBudget" checked>
+                                    value="20,000 PHP - 30,000 PHP" name="senderBudget" checked required>
                                 <label class="form-check-label" for="budget1">
                                     20,000 PHP - 30,000 PHP (Ideal for landing pages and small 1-2 page sites)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" id="budget2"
-                                    value="30,000 PHP - 70,000 PHP" name="senderBudget">
+                                    value="30,000 PHP - 70,000 PHP" name="senderBudget" required>
                                 <label class="form-check-label" for="budget2">
                                     30,000 PHP - 70,000 PHP (Ideal for sites with 3-6 pages, basic integrations, basic
                                     animations)
@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" id="budget3" value="70,000 PHP +"
-                                    name="senderBudget">
+                                    name="senderBudget" required>
                                 <label class="form-check-label" for="budget3">
                                     70,000 PHP + (Ideal for larger sites, custom design and development builds, advanced
                                     animations and
@@ -91,7 +91,7 @@
                             </div>
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" id="budget4" value="Unknown"
-                                    name="senderBudget">
+                                    name="senderBudget" required>
                                 <label class="form-check-label" for="budget4">
                                     Unknown - If you're not sure and your budget is flexible.
                                 </label>
