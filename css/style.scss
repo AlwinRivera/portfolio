@@ -1,0 +1,326 @@
+// VARIABLES
+$bodyFont: 'Inter', sans-serif;
+$headingFont: 'Source Sans Pro', sans-serif;
+$mainBackgroundColor: #030a20;
+$textColor: #fff;
+$headingFontSize: 38px;
+$subheadingFontSize: 24px;
+$headingFontSizeOnTablets: 41px;
+$largeHeadingFontSizeOnTablets: 67px;
+
+// MIXINS
+@mixin topBorder { 
+    border-top: 1px solid #fff
+}
+
+/* GENERAL */
+body {
+    background-color: $mainBackgroundColor;
+    font-family: $bodyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headingFont;
+}
+
+/* NAVBAR */
+nav {
+    background-color: $mainBackgroundColor;
+}
+
+.nav-link {
+    color: $textColor;
+}
+
+/* MAIN */
+main {
+    background-color: $mainBackgroundColor;
+    color: $textColor;
+}
+
+h1 {
+    font-size: $headingFontSize;
+    margin: 2.5rem 0;
+}
+
+.prof-pic {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* INFO */
+.info-container {
+    margin-bottom: 4rem;
+
+    .info {
+        padding-top: 4px;
+        @include topBorder;
+
+        span {
+            opacity: .7;
+        }
+
+        a {
+            color: $textColor;
+            text-decoration: none;
+        }
+    }
+}
+
+/* SUBHEADING */
+.subheading-container {
+    margin-bottom: 5rem;
+
+    h2 {
+        font-size: $subheadingFontSize;
+    }
+
+    a {
+        color: $textColor;
+    }
+}
+
+/* SKILLS */
+.skills-container{
+    h3 {
+    font-size: $headingFontSize;
+    margin-bottom: 2rem;
+    }
+
+    .skill {
+        padding-top: 1rem;
+        @include topBorder;
+        margin-bottom: 5rem;
+    
+        .desc span {
+            display: block;
+            font: {
+                size: $subheadingFontSize;
+                weight: 600;
+            }
+            margin-bottom: .5rem;
+        }
+
+        img {
+            margin: 2rem 0 3rem 0;
+        }
+    }
+}
+
+/* WORK */
+.work-container{
+    h3 {
+        font-size: $headingFontSize;
+        margin-bottom: 2rem;
+    }
+
+    .work {
+        padding-top: 35px;
+        @include topBorder;
+    }
+
+    .carousel img {
+        background-color: #1F2438;
+        padding: 20px 30px;
+        margin-bottom: 3rem;
+    }
+
+    .info{
+        a {
+            text-decoration: none;
+            color: $textColor;
+        }
+
+        span {
+            font-size: $subheadingFontSize;
+        }
+
+        img {
+            margin-left: 10px;
+        }
+
+        p {
+            margin: .75rem 0 4rem 0;
+        }
+    }
+}
+
+
+/* CONTACT */
+#contact {
+    background-color: #DD561C;
+    color: $textColor;
+    padding-top: 40px;
+
+    h3 {
+        font-size: $headingFontSize;
+        margin: .5rem 0 2rem 0;
+    }
+
+    p {
+        font-size: $subheadingFontSize;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        color: $textColor;
+    }
+
+    .nav a {
+        font-size: $subheadingFontSize;
+    }
+}
+
+/* COPYRIGHT */
+footer {
+    padding: 20px 0 20px 0;
+    @include topBorder;
+    margin-top: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* TOP FOLD */
+    h1 {
+        font-size: $headingFontSizeOnTablets;
+    }
+
+    /* SUBHEADING */
+    .subheading-container h2 {
+        font-size: $headingFontSizeOnTablets;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    /* SKILLS */
+    .skills-container{
+        .row {
+            @include topBorder;
+        }
+
+        .skill, .skill.first {
+            padding-top: 5rem;
+            border-top: unset;
+            margin-bottom: 5rem;
+        }
+
+        h3 {
+            font-size: $largeHeadingFontSizeOnTablets;
+            margin-bottom: 5rem;
+        }
+
+        .skill img {
+            margin-top: 0;
+        }
+    }
+
+    /* WORK */
+    .work-container{
+        h3 {
+            font-size: $largeHeadingFontSizeOnTablets;
+            margin-top: 7rem;
+        }
+
+        .work {
+            margin-top: 5rem;
+        }
+
+        .carousel img {
+            background-color: #1F2438;
+            padding: 30px 40px;
+            margin-bottom: 3rem;
+            width: 800px;
+        }
+
+        .info span {
+            font-size: $headingFontSizeOnTablets;
+        }
+    }
+
+    /* CONTACT */
+    #contact {
+        margin-top: 7rem;
+
+        h3 {
+            font-size: $largeHeadingFontSizeOnTablets;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            margin-bottom: 3rem;
+        }
+
+        .nav a {
+            margin-right: 30px;
+        }
+    }
+    
+    /* COPYRIGHT */
+    footer {
+        margin-top: 10rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* TOP FOLD */
+    .top-fold {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: $largeHeadingFontSizeOnTablets;
+    }
+
+    /* SKILLS */
+    .skills-container h3 {
+        margin-bottom: 5rem;
+    }
+
+    /* WORK */
+    .work-container .work {
+        padding-top: 5rem;
+    }
+}
+
+// ANIMATION
+.slideanim {
+    visibility:hidden;
+}
+
+.slide {
+  animation: {
+    name: slide;
+    duration: 1s;
+  }
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}

@@ -1,6 +1,6 @@
 /* GENERAL */
 body {
-  background-color: #030a20;
+  background-color: "#3091F";
   font-family: "Inter", sans-serif;
 }
 
@@ -15,22 +15,23 @@ h6 {
 
 /* NAVBAR */
 nav {
-  background-color: #030a20;
+  background-color: #03091F;
 }
 
 .nav-link {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* MAIN */
 main {
-  background-color: #030a20;
+  background-color: #03091F;
   color: #fff;
 }
 
 h1 {
   font-size: 38px;
-  margin: 2.5rem 0;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .prof-pic {
@@ -42,13 +43,16 @@ h1 {
 .info-container {
   margin-bottom: 4rem;
 }
+
 .info-container .info {
   padding-top: 4px;
   border-top: 1px solid #fff;
 }
+
 .info-container .info span {
   opacity: 0.7;
 }
+
 .info-container .info a {
   color: #fff;
   text-decoration: none;
@@ -58,9 +62,11 @@ h1 {
 .subheading-container {
   margin-bottom: 5rem;
 }
+
 .subheading-container h2 {
   font-size: 24px;
 }
+
 .subheading-container a {
   color: #fff;
 }
@@ -70,19 +76,30 @@ h1 {
   font-size: 38px;
   margin-bottom: 2rem;
 }
+
 .skills-container .skill {
   padding-top: 1rem;
   border-top: 1px solid #fff;
   margin-bottom: 5rem;
 }
-.skills-container .skill .desc span {
+
+.skills-container .skill .no {
+  display: block;
+  font-size: 101px;
+  font-weight: 600;
+}
+
+.skills-container .desc span {
   display: block;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+
 .skills-container .skill img {
-  margin: 2rem 0 3rem 0;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* WORK */
@@ -90,27 +107,34 @@ h1 {
   font-size: 38px;
   margin-bottom: 2rem;
 }
+
 .work-container .work {
   padding-top: 35px;
   border-top: 1px solid #fff;
 }
+
 .work-container .carousel img {
   background-color: #1F2438;
   padding: 20px 30px;
   margin-bottom: 3rem;
 }
+
 .work-container .info a {
   text-decoration: none;
   color: #fff;
 }
+
 .work-container .info span {
   font-size: 24px;
 }
+
 .work-container .info img {
   margin-left: 10px;
 }
+
 .work-container .info p {
-  margin: 0.75rem 0 4rem 0;
+  margin-top: 12px;
+  margin-bottom: 4rem;
 }
 
 /* CONTACT */
@@ -119,24 +143,30 @@ h1 {
   color: #fff;
   padding-top: 40px;
 }
+
 #contact h3 {
   font-size: 38px;
-  margin: 0.5rem 0 2rem 0;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
+
 #contact p {
   font-size: 24px;
   margin-bottom: 2rem;
 }
+
 #contact a {
   color: #fff;
 }
+
 #contact .nav a {
   font-size: 24px;
 }
 
 /* COPYRIGHT */
 footer {
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid #fff;
   margin-top: 4rem;
 }
@@ -154,11 +184,11 @@ footer {
   }
   /* SKILLS */
   .skills-container .row {
-    border-top: 1px solid #fff;
+    border: unset;
   }
   .skills-container .skill, .skills-container .skill.first {
     padding-top: 5rem;
-    border-top: unset;
+    border-top: 1px solid #fff;
     margin-bottom: 5rem;
   }
   .skills-container h3 {
@@ -218,41 +248,11 @@ footer {
   .skills-container h3 {
     margin-bottom: 5rem;
   }
+  .skills-container .skill .no {
+    font-size: 177px;
+  }
   /* WORK */
   .work-container .work {
     padding-top: 5rem;
-  }
-}
-.slideanim {
-  visibility: hidden;
-}
-
-.slide {
-  -webkit-animation-name: slide;
-          animation-name: slide;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  visibility: visible;
-}
-
-/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-@-webkit-keyframes slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
   }
 }/*# sourceMappingURL=style.css.map */
